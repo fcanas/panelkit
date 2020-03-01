@@ -586,10 +586,9 @@
 			};
 			buildConfigurationList = BE24ACFD1E4F6B11008892A2 /* Build configuration list for PBXProject "PanelKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
