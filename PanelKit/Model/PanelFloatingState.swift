@@ -9,21 +9,17 @@
 import Foundation
 import CoreGraphics
 
-public struct PanelFloatingState: Codable {
+public struct PanelFloatingState: Codable, Hashable {
 	
 	let relativePosition: CGPoint
 	let zIndex: Int
 	
 }
 
-extension PanelFloatingState: Hashable {
-	
-	static public func ==(lhs: PanelFloatingState, rhs: PanelFloatingState) -> Bool {
-		return lhs.relativePosition == rhs.relativePosition && lhs.zIndex == rhs.zIndex
-	}
-	
-	public var hashValue: Int {
-		return zIndex.hashValue
-	}
-	
+extension CGPoint: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        x.hash(into: &hasher)
+        y.hash(into: &hasher)
+    }
 }
+
