@@ -114,8 +114,6 @@ import UIKit
 
 		panelNavigationController.panelViewController = self
 
-		panelNavigationController.navigationBar.tintColor = contentViewController.view.tintColor
-
 		self.view.clipsToBounds = false
 
 		panelNavigationController.view.layer.cornerRadius = cornerRadius
